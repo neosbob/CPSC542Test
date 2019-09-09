@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SA</string>
+    <string name="sorting">Sorting</string>
+    <string name="records">Records</string>
+    <string name="AboutUs">AboutUs</string>
+    <string name="title">Our app purpose: For sorting an array with range in 2 - 8</string>
+    <string name="S">SORTING APP</string>
+    <string name="hintnum">Please Input Your Numbers</string>
+    <string name="add">ADD</string>
+    <string name="processsort">SORTING NOW</string>
+    <string name="n">no more numbers</string>
+    <string name="Clear">Clear Your Sets</string>
+</resources>

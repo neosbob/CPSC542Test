@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <item name ="android:navigationBarColor">@color/custom</item>
+        <item name="android:background">@color/custom</item>
+        <item name="android:textStyle"> bold</item>
+    </style>
+</resources>

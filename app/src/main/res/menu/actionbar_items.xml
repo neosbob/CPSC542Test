@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+
+        android:id = "@+id/sorting"
+        android:title = "@string/sorting"
+        android:icon = "@drawable/n1"
+
+        app:showAsAction="always|withText"
+
+        />
+
+
+    <item
+
+        android:id = "@+id/records"
+        android:title = "@string/records"
+        android:icon = "@drawable/n2"
+
+        app:showAsAction="ifRoom"
+
+        />
+
+
+    <item
+
+        android:id = "@+id/aboutus"
+        android:title = "@string/AboutUs"
+
+        app:showAsAction="ifRoom"
+        android:icon = "@drawable/n3"
+
+
+        />
+
+</menu>
