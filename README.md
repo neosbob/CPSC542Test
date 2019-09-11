@@ -9,5 +9,5 @@ index value starts from 0.
 
 
 ##  BeTa Demo of the app
-![Demo]()
+![Demo](https://github.com/Dpham181/Sorting-APP-/blob/master/beta.gif)
 
