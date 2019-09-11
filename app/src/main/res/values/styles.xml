@@ -1,9 +1,16 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name ="android:navigationBarColor">@color/custom</item>
         <item name="android:background">@color/custom</item>
         <item name="android:textStyle"> bold</item>
+        <item name="android:textColor"> @color/white</item>
+    </style>
+
+
+
+    <style name="Widget.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:paddingBottom">8dp</item>
     </style>
 </resources>

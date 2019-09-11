@@ -22,20 +22,28 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:fontFamily="casual"
+        android:stateListAnimator="@android:anim/fade_in"
         android:text="@string/add"
         android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/design_default_color_background" />
 
     <com.google.android.material.textfield.TextInputLayout
+
         android:id="@+id/hintinput"
-        android:layout_width="287dp"
-        android:layout_height="wrap_content"
+
+        style="@style/Widget.TextInputLayout"
+        android:layout_width="288dp"
+        android:layout_height="62dp"
         android:layout_marginStart="8dp"
         android:hint="@string/hintnum"
-        android:textColorHint="@color/mtrl_on_surface_emphasis_high_type"
+        android:textColorHint="@color/material_on_surface_emphasis_high_type"
         app:boxBackgroundColor="@color/custom"
-        app:boxStrokeColor="@color/mtrl_dark_on_surface_emphasis_high_type"
+        app:boxStrokeColor="@color/design_default_color_on_primary"
         app:counterTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:errorEnabled="true"
         app:errorTextAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -49,10 +57,10 @@
             android:id="@+id/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
             android:imeOptions="actionDone"
+            android:singleLine="true"
 
-             />
+            android:textColor="@color/design_default_color_background" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -62,11 +70,16 @@
         android:layout_marginStart="8dp"
 
         android:layout_marginEnd="8dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:fontFamily="casual"
         android:text="@string/processsort"
+        android:textAllCaps="true"
         android:textColor="@color/white"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hintinput" />
+        app:layout_constraintTop_toBottomOf="@+id/hintinput"
+        app:rippleColor="@color/design_default_color_background" />
 
 
     <com.google.android.material.button.MaterialButton
@@ -75,13 +88,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
+        android:backgroundTint="@android:color/darker_gray"
         android:textColor="@color/white"
         app:icon="@drawable/ic_autorenew_black_24dp"
         app:iconGravity="textEnd"
         app:iconTint="@color/design_default_color_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:rippleColor="@color/colorAccent" />
 
     <ListView
         android:id="@+id/Lists"

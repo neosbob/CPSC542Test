@@ -10,32 +10,31 @@
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/wlecome"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:lineSpacingExtra="24sp"
         android:text="@string/S"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gifImageView2"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintTop_toTopOf="@+id/gifImageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
