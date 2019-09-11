@@ -9,7 +9,8 @@ index value starts from 0.
 
 <p align="center" width="350" >
 ##  BeTa Demo of the app
-![Demo](https://github.com/Dpham181/Sorting-APP-/blob/master/beta.gif)
+  <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/beta.gif" alt="Your image title" width="250"/>
+
 
 </p>
 
