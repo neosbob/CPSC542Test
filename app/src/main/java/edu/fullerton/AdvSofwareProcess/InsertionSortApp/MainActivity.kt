@@ -4,9 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.Menu
-import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_main.*
+
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +19,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+
+
+
+    }
+
+
+    override fun onResume() {
+
+
         Handler().postDelayed({
 
             val intentS = Intent(this, sort::class.java)
@@ -26,11 +35,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentS)
 
         }, 3000)
-
-         
-
+        super.onResume()
     }
-
-
 
 }
