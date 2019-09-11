@@ -7,10 +7,8 @@ index value starts from 0.
  Example I/O and process of the “InsertionSortApp”:
 
 
-<p align="center" width="350" >
 ##  BeTa Demo of the app
-  <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/beta.gif" alt="Your image title" width="250"/>
+ <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/beta.gif" alt="Beta" width="250" align="center" />
 
 
-</p>
 
