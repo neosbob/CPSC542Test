@@ -6,10 +6,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.core.graphics.toColorInt
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_sort.*
 import kotlinx.android.synthetic.main.activity_sort.view.*
 
@@ -87,18 +91,16 @@ class sort : AppCompatActivity() {
     
 
      */
-    fun Condition_add(num: Int) : String {
+    fun Condition_add(num: Int) : Boolean {
 
-        if (num >=  0 && num <= 9 ){
+        if (num in 0.rangeTo(9) ){
 
             Datas.add(num)
             result.add(Datas.toString())
-            return ""
+            return true
         }
 
-        else{
-            return "Your Input not in range 0-9"
-        }
+        return false
 
     }
     /*
@@ -107,21 +109,21 @@ class sort : AppCompatActivity() {
      The minimum input size = 2 (otherwise, issue an error message)
 
      */
-    fun Check_Size (arrays: ArrayList<Int>):String{
+    fun Check_Size (arrays: ArrayList<Int>):Int{
 
         if ( arrays.size < 2 )
         {
-            return "Minimum two integers in order to sort"
+            return 1
         }
         else if ( arrays.size > 8 ){
-            return "Maximum  eight numbers in order to sort"
+            return 2
 
         }
         else{
 
             InsertionSort(arrays)
 
-            return ""
+            return 0
         }
 
     }
@@ -129,9 +131,12 @@ class sort : AppCompatActivity() {
 
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sort)
+
+
 
 
         // make an contructor for simple textview in the datas array
@@ -155,12 +160,15 @@ class sort : AppCompatActivity() {
             else {
              t = input.split(" ",",") as ArrayList<String>
 
-                Log.i("string", t.toString());
 
                 t.forEach() {
 
+                    if(!Condition_add(it.toInt())) {
 
-                    Toast.makeText(this, Condition_add(it.toInt()), Toast.LENGTH_LONG).show()
+                        Toasty.error(this, "Your Input not in Range 0-9", Toast.LENGTH_LONG, true)
+                            .show()
+                        Datas.clear()
+                    }
                     adapter.notifyDataSetChanged()
                     // this is the internal function use for notify the list change and update layout
                 }
@@ -170,14 +178,29 @@ class sort : AppCompatActivity() {
         process.setOnClickListener {
 
             result.clear()
-            Toast.makeText(this,  Check_Size(Datas), Toast.LENGTH_LONG).show()
 
 
-            if( Check_Size(Datas) == "") {
+            Toasty.Config.getInstance().tintIcon(true).apply()
+
+            if( Check_Size(Datas) == 1 ) {
+                Datas.clear()
+
+
+                Toasty.error(this,  "Minimum Two Numbers For Sorting", Toast.LENGTH_SHORT, true).show()
+
+            }
+            else if (Check_Size(Datas) == 2){
+                Datas.clear()
+                Toasty.error(this,  "Maximum Eight Numbers For Sorting", Toast.LENGTH_SHORT, true).show()
+
+            }
+            else {
+
                 clear.visibility = VISIBLE
+
+
             }
             adapter.notifyDataSetChanged()
-
 
 
         }
@@ -195,6 +218,8 @@ class sort : AppCompatActivity() {
         }
 
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.actionbar_items, menu)
