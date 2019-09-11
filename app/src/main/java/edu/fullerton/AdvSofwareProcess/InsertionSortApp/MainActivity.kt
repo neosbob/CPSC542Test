@@ -3,6 +3,7 @@ package edu.fullerton.AdvSofwareProcess.InsertionSortApp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
@@ -10,9 +11,22 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        /*
+        Handler().postDelayed({
+
+
+
+        }, 3000)
+        */
+         
+
     }
 
 
@@ -25,9 +39,9 @@ class MainActivity : AppCompatActivity() {
 
         return when (item?.itemId) {
             R.id.sorting -> {
-                val intent = Intent(this, sort::class.java)
-                startActivity(intent)
+                val intentS = Intent(this, sort::class.java)
 
+                startActivity(intentS)
 
                 true;
 

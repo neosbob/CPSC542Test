@@ -19,8 +19,7 @@
 
         android:id = "@+id/records"
         android:title = "@string/records"
-        android:icon = "@drawable/n2"
-
+        android:icon = "@drawable/ic_history_black_24dp"
         app:showAsAction="ifRoom"
 
         />
@@ -32,7 +31,7 @@
         android:title = "@string/AboutUs"
 
         app:showAsAction="ifRoom"
-        android:icon = "@drawable/n3"
+        android:icon = "@drawable/ic_contacts_black_24dp"
 
 
         />
