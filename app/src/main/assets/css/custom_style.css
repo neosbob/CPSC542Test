@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+body {
+  /* All page content inside body */
+  overflow-x: hidden;
+  color: #505962;
+  font-family: "Lato", sans-serif;
+}
+
+/* Optional No Padding */
+/* additional padding to every class begin w/ col- */
+  [class*="col-"] {
+  padding: 0rem!important;
+}
+
+/*[class*="col-"] {
+  padding: 1rem!important;
+} */
+
+h3.profile_heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+.profile_heading_underline {
+  width: 6rem;
+  height: 0.2rem;
+  background-color: #9C27B0;
+  margin: 0 auto 2rem;
+}
+
+.card svg.svg-inline--fa {
+  font-size: 1.3rem;
+  width: 2rem;
+  color: #9C27B0!important;
+}
+
+.card svg.svg-inline--fa:hover {
+  color: #6c757d!important;
+}
+
+.card {
+  margin: 1.5rem 0rem;
+  border-radius: 0;
+  transition: transform 0.4s ease;
+  border: 0.1rem solid rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.075);
+}
+
+.card h4 {
+  font-weight: 700;
+}
+
+.card h5 {
+  color: #9C27B0;
+}
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.card:hover {
+  transform: scale(0.95)
+}
+
+.card p {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
