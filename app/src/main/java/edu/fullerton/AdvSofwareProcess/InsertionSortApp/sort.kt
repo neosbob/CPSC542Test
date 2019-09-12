@@ -6,16 +6,12 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.core.graphics.toColorInt
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_sort.*
-import kotlinx.android.synthetic.main.activity_sort.view.*
 
 
 class sort : AppCompatActivity() {
@@ -223,6 +219,7 @@ class sort : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.actionbar_items, menu)
+        menu.removeItem(R.id.sorting)
         return true
     }
 
@@ -230,18 +227,6 @@ class sort : AppCompatActivity() {
 
         return when (item?.itemId) {
 
-            /* not use
-            R.id.sorting -> {
-                val intentS = Intent(this, sort::class.java)
-
-                startActivity(intentS)
-
-                true;
-
-            }
-
-
-             */
 
             R.id.records -> {
 

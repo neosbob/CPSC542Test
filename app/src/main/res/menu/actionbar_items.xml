@@ -3,6 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+    <item
+
+        android:id = "@+id/sorting"
+        android:title = "Sort"
+        android:icon = "@drawable/n1"
+        app:showAsAction="always"
+
+        />
 
    
 
