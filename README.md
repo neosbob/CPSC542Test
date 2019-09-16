@@ -13,4 +13,4 @@ index value starts from 0.
 
 ## Interagtion White-box Test with Espresso UI 
 
-<embed src="https://github.com/Dpham181/Sorting-APP-/blob/Dev-Branch/TestResults-MainActivityTest.html alt="Beta" width="250" align="center"/>
+<embed src="https://github.com/Dpham181/Sorting-APP-/blob/Dev-Branch/MainActivityTest.html alt="Beta" width="250" align="center"/>
