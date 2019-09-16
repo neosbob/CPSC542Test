@@ -11,7 +11,7 @@ index value starts from 0.
  <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/beta.gif" alt="Beta" width="250" align="center" />
 
 
-## Interagtion White-box Test with Espresso UI 
+##  White-box Integration Test with Espresso UI (<link href="https://developer.android.com/training/testing/ui-testing/espresso-testing" />
 
-<img src="https://github.com/Dpham181/Sorting-APP-/blob/Dev-Branch/UI_TEST/sort.PNG" alt="sort" height ="300" width="700" align="center"/>
-<img src="https://github.com/Dpham181/Sorting-APP-/blob/Dev-Branch/UI_TEST/maintest.PNG" alt="main" height ="300" width="700" align="center"/>
+<img src="https://github.com/Dpham181/Sorting-APP-/blob/Dev-Branch/UI_TEST/sort.PNG" alt="sort" height ="300" width="800" align="center"/>
+<img src="https://github.com/Dpham181/Sorting-APP-/blob/Dev-Branch/UI_TEST/maintest.PNG" alt="main" height ="300" width="800" align="center"/>
