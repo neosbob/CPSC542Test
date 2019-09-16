@@ -15,6 +15,8 @@ import kotlinx.android.synthetic.main.activity_sort.*
 
 
 class sort : AppCompatActivity() {
+
+
     val Datas = ArrayList<Int>();
     val result = ArrayList<String>();
     var t = ArrayList<String>();
@@ -31,22 +33,20 @@ class sort : AppCompatActivity() {
 
 
      */
-    fun InsertionSort (arrays: ArrayList<Int>){
+    fun InsertionSort(arrays: ArrayList<Int>) {
 
-        val  size = arrays.size;
+        val size = arrays.size;
 
 
 
         for (i in 1 until size) {
 
 
-
-
             val Initial_Value = arrays[i]
 
             var j = i - 1
 
-            if( !result.contains(arrays.toString())){
+            if (!result.contains(arrays.toString())) {
                 result.add(arrays.toString());
 
             }
@@ -59,7 +59,6 @@ class sort : AppCompatActivity() {
                 j -= 1
 
 
-
             }
 
 
@@ -67,16 +66,11 @@ class sort : AppCompatActivity() {
             arrays[j + 1] = Initial_Value
 
 
-
-
-
         }
-        Log.i("t", result.size.toString());
 
-
-        Log.i("t", result.toString());
 
     }
+
     /* condition
 
 
@@ -87,35 +81,35 @@ class sort : AppCompatActivity() {
     
 
      */
-    fun Condition_add(num: Int) : Boolean {
+    fun Condition_add(num: Int): Boolean {
 
-        if (num in 0.rangeTo(9) ){
+        if (num in 0.rangeTo(9)) {
 
             Datas.add(num)
             result.add(Datas.toString())
             return true
         }
-
+        result.clear();
         return false
 
     }
+
     /*
 
     The maximum input size = 8 (maximum number of numbers to sort)
      The minimum input size = 2 (otherwise, issue an error message)
 
      */
-    fun Check_Size (arrays: ArrayList<Int>):Int{
+    fun Check_Size(arrays: ArrayList<Int>): Int {
 
-        if ( arrays.size < 2 )
-        {
+        if (arrays.size < 2) {
+            result.clear();
             return 1
-        }
-        else if ( arrays.size > 8 ){
+        } else if (arrays.size > 8) {
+            result.clear();
             return 2
 
-        }
-        else{
+        } else {
 
             InsertionSort(arrays)
 
@@ -125,14 +119,9 @@ class sort : AppCompatActivity() {
     }
 
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sort)
-
-
 
 
         // make an contructor for simple textview in the datas array
@@ -144,22 +133,20 @@ class sort : AppCompatActivity() {
         clear.visibility = INVISIBLE
 
         // add button to check all the condition need 0 -9 integers
-        add!!.setOnClickListener{
+        add!!.setOnClickListener {
             // toast function using for make an little message at the bottom of screen
             val input = input.text.toString().trim()
 
-            if(input.isEmpty()){
+            if (input.isEmpty()) {
                 Toast.makeText(this, "No Numbers input ", Toast.LENGTH_LONG).show()
 
-            }
-
-            else {
-             t = input.split(" ",",") as ArrayList<String>
+            } else {
+                t = input.split(" ", ",") as ArrayList<String>
 
 
                 t.forEach() {
 
-                    if(!Condition_add(it.toInt())) {
+                    if (!Condition_add(it.toInt())) {
 
                         Toasty.error(this, "Your Input not in Range 0-9", Toast.LENGTH_LONG, true)
                             .show()
@@ -178,19 +165,19 @@ class sort : AppCompatActivity() {
 
             Toasty.Config.getInstance().tintIcon(true).apply()
 
-            if( Check_Size(Datas) == 1 ) {
+            if (Check_Size(Datas) == 1) {
                 Datas.clear()
 
 
-                Toasty.error(this,  "Minimum Two Numbers For Sorting", Toast.LENGTH_SHORT, true).show()
+                Toasty.error(this, "Minimum Two Numbers For Sorting", Toast.LENGTH_SHORT, true)
+                    .show()
 
-            }
-            else if (Check_Size(Datas) == 2){
+            } else if (Check_Size(Datas) == 2) {
                 Datas.clear()
-                Toasty.error(this,  "Maximum Eight Numbers For Sorting", Toast.LENGTH_SHORT, true).show()
+                Toasty.error(this, "Maximum Eight Numbers For Sorting", Toast.LENGTH_SHORT, true)
+                    .show()
 
-            }
-            else {
+            } else {
 
                 clear.visibility = VISIBLE
 
@@ -214,7 +201,6 @@ class sort : AppCompatActivity() {
         }
 
     }
-
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
