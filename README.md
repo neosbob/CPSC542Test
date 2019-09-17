@@ -11,4 +11,15 @@ index value starts from 0.
  <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/beta.gif" alt="Beta" width="250" align="center" />
 
 
+##  White-box Integration Test with Espresso UI 
+
+
+
+<img src="https://github.com/Dpham181/Sorting-APP-/blob/Dev-Branch/UI_TEST/sort.PNG" alt="sort" height ="300" width="800" align="center"/>
+<img src="https://github.com/Dpham181/Sorting-APP-/blob/Dev-Branch/UI_TEST/maintest.PNG" alt="main" height ="300" width="800" align="center"/>
+
+
+## Resources:
+- [Espresso-Testing](https://developer.android.com/training/testing/ui-testing/espresso-testing)
+
 

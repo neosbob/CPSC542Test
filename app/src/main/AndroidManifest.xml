@@ -23,9 +23,11 @@
 
     <activity android:name=".sort" >
 
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+    </activity>
 
-
-</activity>
 
 <activity android:name=".MainActivity">
             <intent-filter>
