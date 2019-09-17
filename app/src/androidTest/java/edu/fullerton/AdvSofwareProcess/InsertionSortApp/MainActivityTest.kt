@@ -26,14 +26,11 @@ class MainActivityTest {
 
     @Test
     fun View_test () {
-
-
         // this test for textview app name
         onView(withId(R.id.textView2))
             .check(matches(withText("Insertion Sort App")))
         // gifview test id
         onView(withId(R.id.gifImageView2)).check(matches(withResourceName("gifImageView2")))
-        SystemClock.sleep(3000);
 
     }
     @Test
@@ -41,11 +38,8 @@ class MainActivityTest {
         // Context of the app under test.
         onView(withId(R.id.sorting)).perform(click())
         onView(isRoot()).perform(ViewActions.pressBack());
-
         onView(withId(R.id.aboutus)).perform(click())
-
         onView(withId(R.id.records)).perform(click())
-        SystemClock.sleep(3000);
     }
 }
 

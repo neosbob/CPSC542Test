@@ -19,75 +19,65 @@ import org.junit.runner.RunWith
 class sortTest {
     @get:Rule
     var activityRule: ActivityTestRule<sort> = ActivityTestRule(sort::class.java)
-    val InputwithComma = "5,4,6,4,2,1"
-    val InputwithSpace = "5 8 9 3 2 4"
-    val ErrorSize ="1 2 3 4 5 6 7 8 9"
-    val InvalidInput ="11"
 
-    fun TestValidInput(res:String) {
-
-
+    @Test
+    fun TestInputWithComma() {
 
         onView(withId(R.id.input))
-            .perform(typeText(res))
+            .perform(typeText("5,4,6,4,2,1"))
         Espresso.closeSoftKeyboard()
 
         onView(withId(R.id.add)).perform(click())
         onView(withId(R.id.input))
             .perform(clearText())
-        SystemClock.sleep(3000);
-
 
         onView((withId(R.id.process))).perform(click())
-        SystemClock.sleep(3000);
 
         onView((withId(R.id.clear))).perform(click())
-        SystemClock.sleep(3000);
-
 
     }
-
-    fun TestInvalidInput(res:String) {
-
-
+    @Test
+    fun TestInputWithSpace() {
 
         onView(withId(R.id.input))
-            .perform(typeText(res))
+            .perform(typeText("5 8 9 3 2 4"))
         Espresso.closeSoftKeyboard()
 
         onView(withId(R.id.add)).perform(click())
         onView(withId(R.id.input))
             .perform(clearText())
-        SystemClock.sleep(3000);
-
 
         onView((withId(R.id.process))).perform(click())
-        SystemClock.sleep(3000);
 
-
-    }
-
-
-
-    @Test
-    fun Perform_InputValidTest(){
-
-        TestValidInput(InputwithComma)
-
-        TestValidInput(InputwithSpace)
-
+        onView((withId(R.id.clear))).perform(click())
 
     }
     @Test
-    fun Perform_InputInvalidTest(){
+    fun TestInvalidMaximumSize() {
 
-        TestInvalidInput(ErrorSize)
-        TestInvalidInput(InvalidInput)
+        onView(withId(R.id.input))
+            .perform(typeText("1 2 3 4 5 6 7 8 9"))
+        Espresso.closeSoftKeyboard()
+
+        onView(withId(R.id.add)).perform(click())
+        onView(withId(R.id.input))
+            .perform(clearText())
+        onView((withId(R.id.process))).perform(click())
+
     }
 
+    @Test
+    fun TestInvalidInput() {
 
+        onView(withId(R.id.input))
+            .perform(typeText("11"))
+        Espresso.closeSoftKeyboard()
 
+        onView(withId(R.id.add)).perform(click())
+        onView(withId(R.id.input))
+            .perform(clearText())
+        onView((withId(R.id.process))).perform(click())
 
-
+    }
 
 }
