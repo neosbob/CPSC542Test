@@ -17,7 +17,7 @@ public class SortTest {
     sort sortTest = new sort();
 
     @Test
-    public void InsertionSort_ExpectedResults() {
+    public void InsertionSort_SortedResults() {
         ArrayList<Integer> testArray = new ArrayList<Integer>(Arrays.asList(0,1,3,2,5));
 
         ArrayList<Integer> expectedResult = new ArrayList<Integer>(Arrays.asList(0,1,2,3,5));
@@ -65,6 +65,7 @@ public class SortTest {
 
         assertEquals(expectedResult,actualResult);
     }
+
     @Test
     public void Condition_add_boundarytest_9() {
         boolean expectedResult = true;
