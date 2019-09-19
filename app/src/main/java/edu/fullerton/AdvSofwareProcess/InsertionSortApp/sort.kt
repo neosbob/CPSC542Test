@@ -33,7 +33,7 @@ class sort : AppCompatActivity() {
 
 
      */
-    fun InsertionSort(arrays: ArrayList<Int>) {
+    fun InsertionSort(arrays: ArrayList<Int>): ArrayList<Int> {
 
         val size = arrays.size;
         val expectedArrays = ArrayList<Int>();
@@ -63,7 +63,7 @@ class sort : AppCompatActivity() {
             arrays[j + 1] = Initial_Value
 
         }
-
+        return arrays;
     }
 
     /* condition
