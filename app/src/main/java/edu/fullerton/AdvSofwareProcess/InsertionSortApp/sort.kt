@@ -14,12 +14,14 @@ import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_sort.*
 
 
-class sort : AppCompatActivity() {
+class sort : AppCompatActivity()  {
 
 
     val Datas = ArrayList<Int>();
     val result = ArrayList<String>();
     var t = ArrayList<String>();
+    var recordst= records(0,null,null)
+
     /*
     Pseudo-code
 
@@ -122,6 +124,7 @@ class sort : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sort)
+        val db = AppDatabase.getInstance(this)
 
 
         // make an contructor for simple textview in the datas array
@@ -143,7 +146,9 @@ class sort : AppCompatActivity() {
             } else {
                 t = input.split(" ", ",") as ArrayList<String>
 
+                recordst.input = t.toString()
 
+                Log.i("input", recordst.toString())
                 t.forEach() {
 
                     if (!Condition_add(it.toInt())) {
@@ -159,6 +164,8 @@ class sort : AppCompatActivity() {
         }
         // process sort button for sorting the datas ( array)
         process.setOnClickListener {
+
+
 
             result.clear()
 
@@ -180,7 +187,9 @@ class sort : AppCompatActivity() {
             } else {
 
                 clear.visibility = VISIBLE
-
+                recordst.result= result.toString()
+                db.RecordsDao().insertAll(recordst)
+                db.close()
 
             }
             adapter.notifyDataSetChanged()
@@ -199,6 +208,9 @@ class sort : AppCompatActivity() {
 
 
         }
+
+
+
 
     }
 
