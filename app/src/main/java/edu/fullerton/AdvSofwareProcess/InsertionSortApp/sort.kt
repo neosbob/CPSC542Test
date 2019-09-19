@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_sort.*
+import java.time.LocalDateTime
 
 
 class sort : AppCompatActivity()  {
@@ -20,7 +21,7 @@ class sort : AppCompatActivity()  {
     val Datas = ArrayList<Int>();
     val result = ArrayList<String>();
     var t = ArrayList<String>();
-    var recordst= records(0,null,null)
+    var recordst= records(0,null,null, null)
 
     /*
     Pseudo-code
@@ -147,8 +148,7 @@ class sort : AppCompatActivity()  {
                 t = input.split(" ", ",") as ArrayList<String>
 
                 recordst.input = t.toString()
-
-                Log.i("input", recordst.toString())
+                recordst.date = LocalDateTime.now().toString()
                 t.forEach() {
 
                     if (!Condition_add(it.toInt())) {

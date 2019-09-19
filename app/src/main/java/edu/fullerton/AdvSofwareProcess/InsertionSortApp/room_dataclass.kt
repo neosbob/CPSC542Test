@@ -3,11 +3,12 @@ package edu.fullerton.AdvSofwareProcess.InsertionSortApp
 import android.content.Context
 import android.database.Cursor
 import androidx.room.*
+import java.time.LocalDateTime
 
 
 @Entity(tableName = "Records_Enity")
 
-data class records( @PrimaryKey(autoGenerate = true) val _id : Int, @ColumnInfo(name = "input") var input: String?, @ColumnInfo(name = "result") var result:String?)
+data class records( @PrimaryKey(autoGenerate = true) val _id : Int, @ColumnInfo(name = "input") var input: String?, @ColumnInfo(name = "result") var result:String?, @ColumnInfo(name="date") var date:String?)
 
 
 
@@ -24,7 +25,7 @@ interface RecordsDao {
 }
 
 
-@Database(entities = arrayOf(records::class), version = 3, exportSchema = false)
+@Database(entities = arrayOf(records::class), version = 4, exportSchema = false)
  abstract class AppDatabase : RoomDatabase() {
     abstract fun RecordsDao(): RecordsDao
 

@@ -3,15 +3,19 @@ package edu.fullerton.AdvSofwareProcess.InsertionSortApp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.TextView
+import androidx.cursoradapter.widget.CursorAdapter
 
 import kotlinx.android.synthetic.main.activity_record.*
 
 import androidx.cursoradapter.widget.SimpleCursorAdapter
-
-
-
+import kotlinx.android.synthetic.main.customlistview.*
 
 
 class record : AppCompatActivity(){
@@ -27,41 +31,43 @@ class record : AppCompatActivity(){
 
 
         val allresult = db.RecordsDao().getAll()
-
         /*
+        Log.i("result", allresult.toString())
         val adapter = object :
-            ArrayAdapter<records>(this, android.R.layout.simple_expandable_list_item_2, android.R.id.text1, allresult ) {
+            ArrayAdapter <records>(this, R.layout.customlistview ,R.id.textinput, allresult ) {
 
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val row = super.getView(position, convertView, parent)
 
 
-                val text1 = row.findViewById<TextView>(android.R.id.text1)
-                val text2 = row.findViewById<TextView>(android.R.id.text2)
-                text1.text= "User Input: " + allresult[position].input
+                val text1 = row.findViewById<TextView>(R.id.textinput)
+                val text2 = row.findViewById<TextView>(R.id.textresult)
 
-                text2.text= "User Result: " + allresult[position].result
+
+                text1.text=  allresult[position].input
+
+                text2.text=  allresult[position].result
+                Log.i("ad", row.toString())
 
 
                 return row
             }
         }
 
-         */
-
+*/
 
 
         val adapter = SimpleCursorAdapter(
             this,
-            android.R.layout.simple_list_item_2,
-            allresult, // Pass in the cursor to bind to.
-            arrayOf("_id", "input", "result"), // Array of cursor columns to bind to.
-            intArrayOf(android.R.id.text1, android.R.id.text1, android.R.id.text2)
-        )  // Parallel array of which template objects to bind to those columns.
+          R.layout.customlistview,
+            allresult,
+            arrayOf( "input", "result", "date"),
+            intArrayOf( R.id.textinput, R.id.textresult , R.id.textdate)
+        )
 
         roomview.adapter = adapter
 
-        db.close()
+
 
 
     }
