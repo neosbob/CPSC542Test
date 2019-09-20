@@ -1,5 +1,6 @@
 package edu.fullerton.AdvSofwareProcess.InsertionSortApp;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -9,12 +10,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SortTest {
 
-    sort sortTest = new sort();
+    @Mock
+    sort mockSort;
+
+    @Before
+    public void setUp(){
+        mockSort = new sort();
+    }
+
 
     @Test
     public void InsertionSort_SortedResults() {
@@ -22,7 +29,7 @@ public class SortTest {
 
         ArrayList<Integer> expectedResult = new ArrayList<Integer>(Arrays.asList(0,1,2,3,5));
 
-        ArrayList<Integer> actualResult = sortTest.InsertionSort(testArray);
+        ArrayList<Integer> actualResult = mockSort.InsertionSort(testArray);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -32,7 +39,7 @@ public class SortTest {
 
         boolean expectedResult = false;
 
-        boolean actualResult = sortTest.Condition_add(-1);
+        boolean actualResult = mockSort.Condition_add(-1);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -41,7 +48,7 @@ public class SortTest {
     public void Condition_add_tooBig() {
         boolean expectedResult = false;
 
-        boolean actualResult = sortTest.Condition_add(10);
+        boolean actualResult = mockSort.Condition_add(10);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -50,7 +57,7 @@ public class SortTest {
     public void Condition_add_inRange() {
         boolean expectedResult = true;
 
-        boolean actualResult = sortTest.Condition_add(4);
+        boolean actualResult = mockSort.Condition_add(4);
 
 
 
@@ -61,7 +68,7 @@ public class SortTest {
     public void Condition_add_boundarytest_0() {
         boolean expectedResult = true;
 
-        boolean actualResult = sortTest.Condition_add(0);
+        boolean actualResult = mockSort.Condition_add(0);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -70,7 +77,7 @@ public class SortTest {
     public void Condition_add_boundarytest_9() {
         boolean expectedResult = true;
 
-        boolean actualResult = sortTest.Condition_add(9);
+        boolean actualResult = mockSort.Condition_add(9);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -81,7 +88,7 @@ public class SortTest {
 
         int expectedResult = 0;
 
-        int actualResult = sortTest.Check_Size(testArray);
+        int actualResult = mockSort.Check_Size(testArray);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -92,7 +99,7 @@ public class SortTest {
 
         int expectedResult = 0;
 
-        int actualResult = sortTest.Check_Size(testArray);
+        int actualResult = mockSort.Check_Size(testArray);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -103,7 +110,7 @@ public class SortTest {
 
         int expectedResult = 0;
 
-        int actualResult = sortTest.Check_Size(testArray);
+        int actualResult = mockSort.Check_Size(testArray);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -114,7 +121,7 @@ public class SortTest {
 
         int expectedResult = 1;
 
-        int actualResult = sortTest.Check_Size(testArray);
+        int actualResult = mockSort.Check_Size(testArray);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -125,7 +132,7 @@ public class SortTest {
 
         int expectedResult = 2;
 
-        int actualResult = sortTest.Check_Size(testArray);
+        int actualResult = mockSort.Check_Size(testArray);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -136,7 +143,7 @@ public class SortTest {
 
         int expectedResult = 1;
 
-        int actualResult = sortTest.Check_Size(testArray);
+        int actualResult = mockSort.Check_Size(testArray);
 
         assertEquals(expectedResult,actualResult);
     }
