@@ -59,16 +59,13 @@ class record : AppCompatActivity(){
 
         val adapter = SimpleCursorAdapter(
             this,
-          R.layout.customlistview,
+            R.layout.customlistview,
             allresult,
             arrayOf( "input", "result", "date"),
             intArrayOf( R.id.textinput, R.id.textresult , R.id.textdate)
         )
-
+        
         roomview.adapter = adapter
-
-
-
 
     }
 
