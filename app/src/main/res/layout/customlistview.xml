@@ -2,13 +2,13 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:collapseColumns="*"> <!-- collapse the first column of the table row-->
+    android:collapseColumns="3"> <!-- collapse the first column of the table row-->
 
 
     <!-- first row of the table layout-->
     <TableRow
         android:id="@+id/row1"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
@@ -16,33 +16,30 @@
             android:id="@+id/textinput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dip"
-            android:gravity="start"
             android:text="Text 1"
 
-           />
+            />
 
         <TextView
 
             android:id="@+id/textresult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_weight="10"
             android:padding="20dip"
-
-            android:gravity="start"
-
             android:text="Text 2"
 
-             />
+            />
 
 
         <TextView
 
             android:id="@+id/textdate"
-            android:layout_width="251dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="start"
-            android:padding="20dip"
+            android:padding="5dip"
             android:text="Text 3"
 
             />
