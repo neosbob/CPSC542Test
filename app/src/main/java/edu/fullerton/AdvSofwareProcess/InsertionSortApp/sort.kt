@@ -33,10 +33,10 @@ class sort : AppCompatActivity() {
 
 
      */
-    fun InsertionSort(arrays: ArrayList<Int>) {
+    fun InsertionSort(arrays: ArrayList<Int>): ArrayList<Int> {
 
         val size = arrays.size;
-
+        val expectedArrays = ArrayList<Int>();
 
 
         for (i in 1 until size) {
@@ -48,7 +48,6 @@ class sort : AppCompatActivity() {
 
             if (!result.contains(arrays.toString())) {
                 result.add(arrays.toString());
-
             }
 
             while (j >= 0 && arrays[j] > Initial_Value) {
@@ -61,14 +60,10 @@ class sort : AppCompatActivity() {
 
             }
 
-
-
             arrays[j + 1] = Initial_Value
 
-
         }
-
-
+        return arrays;
     }
 
     /* condition
@@ -240,6 +235,7 @@ class sort : AppCompatActivity() {
             }
         }
     }
+
 
 
 }
