@@ -6,9 +6,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
+import androidx.room.Room
 
 
 class MainActivity : AppCompatActivity() {
+
+
 
 
 
@@ -19,28 +22,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.actionbar_items, menu)
         return true
     }
-    /*
-    override fun onResume() {
 
-
-        Handler().postDelayed({
-
-            val intentS = Intent(this, sort::class.java)
-
-            startActivity(intentS)
-
-        }, 3000)
-        super.onResume()
-    }
-    */
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
 
         return when (item?.itemId) {
