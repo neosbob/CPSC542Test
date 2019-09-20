@@ -26,43 +26,19 @@ class record : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_record)
 
-
+        this.title ="Records"
         val db = AppDatabase.getInstance(this)
 
 
         val allresult = db.RecordsDao().getAll()
-        /*
-        Log.i("result", allresult.toString())
-        val adapter = object :
-            ArrayAdapter <records>(this, R.layout.customlistview ,R.id.textinput, allresult ) {
-
-            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-                val row = super.getView(position, convertView, parent)
-
-
-                val text1 = row.findViewById<TextView>(R.id.textinput)
-                val text2 = row.findViewById<TextView>(R.id.textresult)
-
-
-                text1.text=  allresult[position].input
-
-                text2.text=  allresult[position].result
-                Log.i("ad", row.toString())
-
-
-                return row
-            }
-        }
-
-*/
-
+     
 
         val adapter = SimpleCursorAdapter(
             this,
             R.layout.customlistview,
             allresult,
             arrayOf( "input", "result", "date"),
-            intArrayOf( R.id.textinput, R.id.textresult , R.id.textdate)
+            intArrayOf( R.id.textinput, R.id.textresult , R.id.textdate),0
         )
         
         roomview.adapter = adapter

@@ -36,10 +36,9 @@ class sort : AppCompatActivity()  {
 
 
      */
-    fun InsertionSort(arrays: ArrayList<Int>) {
+    fun InsertionSort(arrays: ArrayList<Int>): ArrayList<Int> {
 
         val size = arrays.size;
-
 
 
         for (i in 1 until size) {
@@ -51,7 +50,6 @@ class sort : AppCompatActivity()  {
 
             if (!result.contains(arrays.toString())) {
                 result.add(arrays.toString());
-
             }
 
             while (j >= 0 && arrays[j] > Initial_Value) {
@@ -64,14 +62,11 @@ class sort : AppCompatActivity()  {
 
             }
 
-
-
             arrays[j + 1] = Initial_Value
-
 
         }
 
-
+        return arrays;
     }
 
     /* condition
@@ -126,10 +121,10 @@ class sort : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sort)
         val db = AppDatabase.getInstance(this)
-
+        this.title="Sorting"
 
         // make an contructor for simple textview in the datas array
-        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, result)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, result)
         // connect the adapter with the listview ( id: Lists)
         Lists.adapter = adapter
 
