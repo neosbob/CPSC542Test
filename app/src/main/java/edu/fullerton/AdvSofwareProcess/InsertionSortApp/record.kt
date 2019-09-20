@@ -26,7 +26,7 @@ class record : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_record)
 
-
+        this.title ="Records"
         val db = AppDatabase.getInstance(this)
 
 
