@@ -21,13 +21,12 @@ public class SortTest {
     public void setUp(){
         mockSort = new sort();
     }
-
-
+    
     @Test
     public void InsertionSort_SortedResults() {
-        ArrayList<Integer> testArray = new ArrayList<Integer>(Arrays.asList(0,1,3,2,5));
+        ArrayList<Integer> testArray = new ArrayList<>(Arrays.asList(0, 1, 3, 2, 5));
 
-        ArrayList<Integer> expectedResult = new ArrayList<Integer>(Arrays.asList(0,1,2,3,5));
+        ArrayList<Integer> expectedResult = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 5));
 
         ArrayList<Integer> actualResult = mockSort.InsertionSort(testArray);
 
@@ -84,7 +83,7 @@ public class SortTest {
 
     @Test
     public void Check_Size_arraySizeinRange() {
-        ArrayList<Integer> testArray = new ArrayList<Integer>(Arrays.asList(0,1,3,2,5));
+        ArrayList<Integer> testArray = new ArrayList<>(Arrays.asList(0, 1, 3, 2, 5));
 
         int expectedResult = 0;
 
@@ -95,7 +94,7 @@ public class SortTest {
 
     @Test
     public void Check_Size_arraySizeEq2() {
-        ArrayList<Integer> testArray = new ArrayList<Integer>(Arrays.asList(0,1));
+        ArrayList<Integer> testArray = new ArrayList<>(Arrays.asList(0, 1));
 
         int expectedResult = 0;
 
@@ -106,7 +105,7 @@ public class SortTest {
 
     @Test
     public void Check_Size_arraySizeEq8() {
-        ArrayList<Integer> testArray = new ArrayList<Integer>(Arrays.asList(0,1,3,2,5,6,7,8));
+        ArrayList<Integer> testArray = new ArrayList<>(Arrays.asList(0, 1, 3, 2, 5, 6, 7, 8));
 
         int expectedResult = 0;
 
@@ -117,7 +116,7 @@ public class SortTest {
 
     @Test
     public void Check_Size_arraySizeLt2() {
-        ArrayList<Integer> testArray = new ArrayList<Integer>(Arrays.asList(1));
+        ArrayList<Integer> testArray = new ArrayList<>(Arrays.asList(1));
 
         int expectedResult = 1;
 
@@ -128,7 +127,7 @@ public class SortTest {
 
     @Test
     public void Check_Size_arraySizeGt8() {
-        ArrayList<Integer> testArray = new ArrayList<Integer>(Arrays.asList(0,1,3,2,5,6,8,9,7));
+        ArrayList<Integer> testArray = new ArrayList<>(Arrays.asList(0, 1, 3, 2, 5, 6, 8, 9, 7));
 
         int expectedResult = 2;
 
@@ -139,7 +138,7 @@ public class SortTest {
 
     @Test
     public void Check_Size_arraySizeEmpty() {
-        ArrayList<Integer> testArray = new ArrayList<Integer>();
+        ArrayList<Integer> testArray = new ArrayList<>();
 
         int expectedResult = 1;
 
