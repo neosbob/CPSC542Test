@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_sort.*
+import java.lang.NumberFormatException
 import java.time.LocalDateTime
 
 
@@ -134,27 +135,59 @@ class sort : AppCompatActivity()  {
         // add button to check all the condition need 0 -9 integers
         add!!.setOnClickListener {
             // toast function using for make an little message at the bottom of screen
-            val input = input.text.toString().trim()
+            val Uinput = input.text.toString().trim()
 
-            if (input.isEmpty()) {
-                Toast.makeText(this, "No Numbers input ", Toast.LENGTH_LONG).show()
+            if (Uinput.isEmpty()) {
+                Toasty.error(this, "No Numbers input ", Toast.LENGTH_LONG).show()
+                input.text?.clear()
+            }else if(Uinput.contains(".")){
+                Toasty.error(this, "Input should be in Integer type ", Toast.LENGTH_LONG).show()
+                input.text?.clear()
 
-            } else {
-                t = input.split(" ", ",") as ArrayList<String>
+            }
+            else {
+                t = Uinput.split(" ", ",") as ArrayList<String>
+                var check = true
 
                 recordst.input = t.toString()
                 recordst.date = LocalDateTime.now().toString()
+
+
                 t.forEach() {
+                    try {
 
-                    if (!Condition_add(it.toInt())) {
+                        if (!Condition_add(it.toInt())) {
 
-                        Toasty.error(this, "Your Input not in Range 0-9", Toast.LENGTH_LONG, true)
-                            .show()
-                        Datas.clear()
+                            Toasty.error(
+                                this,
+                                "Your Input not in Range 0-9",
+                                Toast.LENGTH_LONG,
+                                true
+                            )
+                                .show()
+                            input.text?.clear()
+
+                            Datas.clear()
+                        }
+                        adapter.notifyDataSetChanged()
+                        // this is the internal function use for notify the list change and update layout
+
+                    }catch (e: NumberFormatException) {
+                        check = false
                     }
-                    adapter.notifyDataSetChanged()
-                    // this is the internal function use for notify the list change and update layout
-                }
+                    if (check)
+                        println(" is a number")
+                    else {
+                        Toasty.error(
+                            this,
+                            "Your input not in Integer Type",
+                            Toast.LENGTH_LONG,
+                            true
+                        )
+                            .show()
+                        input.text?.clear()
+
+                    }}
             }
         }
         // process sort button for sorting the datas ( array)
