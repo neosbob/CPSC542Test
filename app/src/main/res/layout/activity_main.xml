@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/welcome_title_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="298dp"
+        android:layout_height="43dp"
         android:layout_marginBottom="200dp"
         android:alpha="0"
         android:fontFamily="sans-serif-condensed-medium"
@@ -21,23 +21,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/main_logo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="69dp"
+        android:layout_width="275dp"
+        android:layout_height="352dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="30dp"
         android:alpha="0"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toTopOf="@+id/welcome_title_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/small_logo" />
