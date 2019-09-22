@@ -7,7 +7,7 @@
 
         android:id = "@+id/sorting"
         android:title = "Sort"
-        android:icon = "@drawable/n1"
+        android:icon = "@drawable/white_sort_icon_70dp"
         app:showAsAction="always"
 
         />
@@ -19,7 +19,7 @@
 
         android:id = "@+id/records"
         android:title = "@string/records"
-        android:icon = "@drawable/ic_history_black_24dp"
+        android:icon = "@drawable/white_color_history_70dp"
         app:showAsAction="ifRoom"
 
         />
@@ -31,7 +31,7 @@
         android:title = "@string/AboutUs"
 
         app:showAsAction="ifRoom"
-        android:icon = "@drawable/ic_contacts_black_24dp"
+        android:icon = "@drawable/white_profile_icon_70dp"
 
 
         />
