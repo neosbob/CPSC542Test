@@ -16,7 +16,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Enter Integers From 2-8"
+        android:text="Integer Range: 0-9, From: 2-8"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/add"
