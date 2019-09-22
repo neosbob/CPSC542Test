@@ -42,6 +42,7 @@ class record : AppCompatActivity(){
         )
         
         roomview.adapter = adapter
+        db.close()
 
     }
 

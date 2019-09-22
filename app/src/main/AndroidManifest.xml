@@ -11,14 +11,15 @@
         android:theme="@style/AppTheme">
         <activity android:name=".record">
 
+          
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".sort" />
+                android:value=".MainActivity" />
         </activity>
         <activity android:name=".about" >
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".sort" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
     </activity>
 
     <activity android:name=".sort" >

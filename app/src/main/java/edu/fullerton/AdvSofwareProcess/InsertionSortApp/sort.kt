@@ -121,8 +121,8 @@ class sort : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sort)
-        val db = AppDatabase.getInstance(this)
         this.title="Sorting"
+        val db = AppDatabase.getInstance(this)
 
         // make an contructor for simple textview in the datas array
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, result)
@@ -139,10 +139,8 @@ class sort : AppCompatActivity()  {
 
             if (Uinput.isEmpty()) {
                 Toasty.error(this, "No Numbers input ", Toast.LENGTH_LONG).show()
-                input.text?.clear()
             }else if(Uinput.contains(".")){
                 Toasty.error(this, "Input should be in Integer type ", Toast.LENGTH_LONG).show()
-                input.text?.clear()
 
             }
             else {
@@ -165,7 +163,6 @@ class sort : AppCompatActivity()  {
                                 true
                             )
                                 .show()
-                            input.text?.clear()
 
                             Datas.clear()
                         }
@@ -175,24 +172,13 @@ class sort : AppCompatActivity()  {
                     }catch (e: NumberFormatException) {
                         check = false
                     }
-                    if (check)
-                        println(" is a number")
-                    else {
-                        Toasty.error(
-                            this,
-                            "Your input not in Integer Type",
-                            Toast.LENGTH_LONG,
-                            true
-                        )
-                            .show()
-                        input.text?.clear()
-
-                    }}
+                   }
             }
         }
         // process sort button for sorting the datas ( array)
         process.setOnClickListener {
 
+            input.text?.clear()
 
 
             result.clear()
@@ -217,7 +203,7 @@ class sort : AppCompatActivity()  {
                 clear.visibility = VISIBLE
                 recordst.result= result.toString()
                 db.RecordsDao().insertAll(recordst)
-                db.close()
+
 
             }
             adapter.notifyDataSetChanged()
@@ -241,6 +227,7 @@ class sort : AppCompatActivity()  {
 
 
     }
+
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
