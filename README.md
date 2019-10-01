@@ -17,7 +17,7 @@
   6) O(N2) runtime
 
 
-# Alpha Test Demo
+## Alpha Test Demo
 <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/alpha.gif" alt="alpha" width="250" align="center" />
 
 ## Getting Started
