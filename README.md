@@ -70,8 +70,8 @@
 ## Software Process:
  - Agile
  - Scrum
- Pre-Game planning
- Sprint planning
+ * Pre-Game planning
+ * Sprint planning
  Sprint review
  High level design phase
  Daily scrum
