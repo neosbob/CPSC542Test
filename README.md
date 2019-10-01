@@ -1,7 +1,6 @@
 # Insertion Sort App
 
 
-Insertion Sort App
 
 ## System Features
 -  App must recognize user input either via button press or numeral.
