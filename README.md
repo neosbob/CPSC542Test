@@ -68,22 +68,22 @@
 
 
 ## Software Process:
- - Agile
- - Scrum
- * Pre-Game planning
- * Sprint planning
- Sprint review
- High level design phase
- Daily scrum
- Sprint
- Common room
- - XP
- Daily build
- Code review
- Unit test
- Continuous integration
- Multiple iterations per sprint
- Simplicity in code design
+ ### Agile
+ ### Scrum
+ - Pre-Game planning
+ - Sprint planning
+ - Sprint review
+ - High level design phase
+ - Daily scrum
+ - Sprint
+ - Common room
+ ### XP
+ - Daily build
+ - Code review
+ - Unit test
+ - Continuous integration
+ - Multiple iterations per sprint
+ - Simplicity in code design
 
 ## Authors
 - **Mahyar Babaie**- _mahyarhajibabaie@csu.fullerton.edu_ -
