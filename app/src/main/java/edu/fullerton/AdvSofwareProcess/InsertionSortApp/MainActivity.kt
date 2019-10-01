@@ -6,41 +6,30 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.room.Room
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 
 class MainActivity : AppCompatActivity() {
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        this.title ="Home"
 
-
-
-
-
+        val welcome_logo = findViewById<ImageView>(R.id.main_logo)
+        val welcome_title = findViewById<TextView>(R.id.welcome_title_text)
+        welcome_logo.animate().alpha(1f).setDuration(1500)
+        welcome_title.animate().alpha(1f).setDuration(2500)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.actionbar_items, menu)
         return true
     }
-    /*
-    override fun onResume() {
 
-
-        Handler().postDelayed({
-
-            val intentS = Intent(this, sort::class.java)
-
-            startActivity(intentS)
-
-        }, 3000)
-        super.onResume()
-    }
-    */
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
 
         return when (item?.itemId) {

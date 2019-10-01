@@ -7,29 +7,44 @@
     tools:context=".sort">
 
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="The range of values to choose from: 0-9. The number of values should be: 2-8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="168dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintGuide_begin="214dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/add"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:backgroundTint="@android:color/darker_gray"
-        android:fontFamily="casual"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="#6300E5"
+        android:fontFamily="sans-serif-condensed-medium"
         android:stateListAnimator="@android:anim/fade_in"
         android:text="@string/add"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:rippleColor="@color/design_default_color_background" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -39,34 +54,36 @@
         style="@style/Widget.TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
         android:hint="@string/hintnum"
-        android:textColorHint="@color/defaultTextColor"
-        app:boxBackgroundColor="@color/custom"
-        app:boxStrokeColor="@color/material_on_primary_emphasis_high_type"
+        android:textColorHint="@color/material_on_primary_emphasis_high_type"
+        app:boxStrokeColor="@color/design_default_color_on_secondary"
         app:counterTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:counterTextColor="@color/material_on_primary_emphasis_high_type"
         app:errorEnabled="true"
         app:errorTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:helperTextTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:helperTextTextColor="@color/colorAccent"
         app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:hintTextColor="@color/defaultTextColor"
+        app:hintTextColor="@color/design_default_color_on_secondary"
         app:layout_constraintBottom_toBottomOf="@+id/add"
         app:layout_constraintEnd_toStartOf="@+id/add"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+
             android:imeOptions="actionDone"
             android:singleLine="true"
-
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -74,32 +91,30 @@
         android:id="@+id/process"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
 
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@android:color/darker_gray"
-        android:fontFamily="casual"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/processsort"
         android:textAllCaps="true"
         android:textColor="@color/white"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/clear"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hintinput"
+        app:layout_constraintTop_toBottomOf="@+id/add"
         app:rippleColor="@color/design_default_color_background" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/clear"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="100dp"
-        android:backgroundTint="@android:color/darker_gray"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#6300E5"
         android:textColor="@color/white"
         app:icon="@drawable/ic_autorenew_black_24dp"
         app:iconGravity="textEnd"
@@ -115,6 +130,7 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clear">
 

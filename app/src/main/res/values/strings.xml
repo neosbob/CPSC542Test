@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">ISA</string>
+    <string name="app_name">Insertion Sort App</string>
 
     <string name="sorting">Sorting</string>
     <string name="records">Records</string>
     <string name="AboutUs">AboutUs</string>
     <string name="title">Our app purpose: For sorting an array with range in 2 - 8</string>
     <string name="S">Insertion Sort App</string>
-    <string name="hintnum">Please Input Your Numbers</string>
-    <string name="add">ADD</string>
-    <string name="processsort">SORTING NOW</string>
+    <string name="hintnum">Enter Values</string>
+    <string name="add">ADD TO LIST</string>
+    <string name="processsort">SORT VALUES</string>
     <string name="n">no more numbers</string>
     <string name="Clear">Clear Your Sets</string>
 </resources>

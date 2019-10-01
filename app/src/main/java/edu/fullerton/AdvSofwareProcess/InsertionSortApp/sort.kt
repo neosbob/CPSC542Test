@@ -12,14 +12,18 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_sort.*
+import java.lang.NumberFormatException
+import java.time.LocalDateTime
 
 
-class sort : AppCompatActivity() {
+class sort : AppCompatActivity()  {
 
 
     val Datas = ArrayList<Int>();
     val result = ArrayList<String>();
     var t = ArrayList<String>();
+    var recordst= records(0,null,null, null)
+
     /*
     Pseudo-code
 
@@ -37,7 +41,6 @@ class sort : AppCompatActivity() {
 
         val size = arrays.size;
         val expectedArrays = ArrayList<Int>();
-
 
         for (i in 1 until size) {
 
@@ -63,6 +66,7 @@ class sort : AppCompatActivity() {
             arrays[j + 1] = Initial_Value
 
         }
+
         return arrays;
     }
 
@@ -117,10 +121,11 @@ class sort : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sort)
-
+        this.title="Sorting"
+        val db = AppDatabase.getInstance(this)
 
         // make an contructor for simple textview in the datas array
-        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, result)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, result)
         // connect the adapter with the listview ( id: Lists)
         Lists.adapter = adapter
 
@@ -130,30 +135,51 @@ class sort : AppCompatActivity() {
         // add button to check all the condition need 0 -9 integers
         add!!.setOnClickListener {
             // toast function using for make an little message at the bottom of screen
-            val input = input.text.toString().trim()
+            val Uinput = input.text.toString().trim()
 
-            if (input.isEmpty()) {
-                Toast.makeText(this, "No Numbers input ", Toast.LENGTH_LONG).show()
+            if (Uinput.isEmpty()) {
+                Toasty.error(this, "No Numbers input ", Toast.LENGTH_LONG).show()
+            }else if(Uinput.contains(".")){
+                Toasty.error(this, "Input should be in Integer type ", Toast.LENGTH_LONG).show()
 
-            } else {
-                t = input.split(" ", ",") as ArrayList<String>
+            }
+            else {
+                t = Uinput.split(" ", ",") as ArrayList<String>
+                var check = true
+
+                recordst.input = t.toString()
+                recordst.date = LocalDateTime.now().toString()
 
 
                 t.forEach() {
+                    try {
 
-                    if (!Condition_add(it.toInt())) {
+                        if (!Condition_add(it.toInt())) {
 
-                        Toasty.error(this, "Your Input not in Range 0-9", Toast.LENGTH_LONG, true)
-                            .show()
-                        Datas.clear()
+                            Toasty.error(
+                                this,
+                                "Your Input not in Range 0-9",
+                                Toast.LENGTH_LONG,
+                                true
+                            )
+                                .show()
+
+                            Datas.clear()
+                        }
+                        adapter.notifyDataSetChanged()
+                        // this is the internal function use for notify the list change and update layout
+
+                    }catch (e: NumberFormatException) {
+                        check = false
                     }
-                    adapter.notifyDataSetChanged()
-                    // this is the internal function use for notify the list change and update layout
-                }
+                   }
             }
         }
         // process sort button for sorting the datas ( array)
         process.setOnClickListener {
+
+            input.text?.clear()
+
 
             result.clear()
 
@@ -175,6 +201,8 @@ class sort : AppCompatActivity() {
             } else {
 
                 clear.visibility = VISIBLE
+                recordst.result= result.toString()
+                db.RecordsDao().insertAll(recordst)
 
 
             }
@@ -195,7 +223,11 @@ class sort : AppCompatActivity() {
 
         }
 
+
+
+
     }
+
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -29,14 +29,14 @@ h3.profile_heading {
 .profile_heading_underline {
   width: 8rem;
   height: 0.2rem;
-  background-color: #9C27B0;
+  background-color: #6300E5;
   margin: 1rem auto 2rem;
 }
 
 .card svg.svg-inline--fa {
   font-size: 1.3rem;
   width: 2rem;
-  color: #9C27B0!important;
+  color: #6300E5!important;
 }
 
 .card svg.svg-inline--fa:hover {
@@ -56,7 +56,7 @@ h3.profile_heading {
 }
 
 .card h5 {
-  color: #9C27B0;
+  color: #6300E5;
 }
 
 .card-img-top {
