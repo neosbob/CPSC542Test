@@ -40,7 +40,7 @@ class sort : AppCompatActivity()  {
     fun InsertionSort(arrays: ArrayList<Int>): ArrayList<Int> {
 
         val size = arrays.size;
-
+        val expectedArrays = ArrayList<Int>();
 
         for (i in 1 until size) {
 
@@ -267,6 +267,7 @@ class sort : AppCompatActivity()  {
             }
         }
     }
+
 
 
 }
