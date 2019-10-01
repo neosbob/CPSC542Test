@@ -93,9 +93,6 @@ Insertion Sort App
 - **Jonathan Poh**-_jpoh@csu.fullerton.edu_
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
