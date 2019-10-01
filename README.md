@@ -18,7 +18,7 @@
 
 
 # Alpha Test Demo
-<img src="https://github.com/Dpham181/Sorting-APP-/master/UI_TEST/alpha.gif" alt="alpha" width="250" align="center" />
+<img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/alpha.gif" alt="alpha" width="250" align="center" />
 
 ## Getting Started
 
