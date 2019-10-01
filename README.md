@@ -38,10 +38,14 @@
 
 ## Running the tests Located In AndroidTest package
 
-### UI Intergation Test  
+### UI Intergation Test
+
 <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/ui1.PNG" alt="sort" height ="300" width="800" align="center"/>
 <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/ui2.PNG" alt="main" height ="300" width="800" align="center"/>
+
 ### Unit test
+
+
 <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/unit.PNG" alt="main" height ="300" width="800" align="center"/>
 
 
