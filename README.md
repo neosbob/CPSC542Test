@@ -17,7 +17,7 @@
   6) O(N2) runtime
 
 
-# Alpha Test Demo
+## Alpha Test Demo
 <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/alpha.gif" alt="alpha" width="250" align="center" />
 
 ## Getting Started
@@ -38,10 +38,14 @@
 
 ## Running the tests Located In AndroidTest package
 
-- UI Intergation Test  
+### UI Intergation Test
+
 <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/ui1.PNG" alt="sort" height ="300" width="800" align="center"/>
 <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/ui2.PNG" alt="main" height ="300" width="800" align="center"/>
-- Unit test
+
+### Unit test
+
+
 <img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/unit.PNG" alt="main" height ="300" width="800" align="center"/>
 
 
@@ -68,22 +72,22 @@
 
 
 ## Software Process:
- - Agile
- - Scrum
- Pre-Game planning
- Sprint planning
- Sprint review
- High level design phase
- Daily scrum
- Sprint
- Common room
- - XP
- Daily build
- Code review
- Unit test
- Continuous integration
- Multiple iterations per sprint
- Simplicity in code design
+ ### Agile
+ ### Scrum
+ - Pre-Game planning
+ - Sprint planning
+ - Sprint review
+ - High level design phase
+ - Daily scrum
+ - Sprint
+ - Common room
+ ### XP
+ - Daily build
+ - Code review
+ - Unit test
+ - Continuous integration
+ - Multiple iterations per sprint
+ - Simplicity in code design
 
 ## Authors
 - **Mahyar Babaie**- _mahyarhajibabaie@csu.fullerton.edu_ -
