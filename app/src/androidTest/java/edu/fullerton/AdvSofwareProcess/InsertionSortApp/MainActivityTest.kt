@@ -27,7 +27,7 @@ class MainActivityTest {
         onView(withId(R.id.welcome_title_text))
             .check(matches(withText("Insertion Sort App")))
         // gifview test id
-        onView(withId(R.id.gifImageView2)).check(matches(withResourceName("gifImageView2")))
+        //onView(withId(R.id.gifImageView2)).check(matches(withResourceName("gifImageView2")))
 
     }
     @Test
