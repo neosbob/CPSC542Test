@@ -9,13 +9,13 @@ This Github repository is for developing Testing for the Insertion Sort App.
 
 ### UI Intergation Test
 
-<img src="https://github.com/neosbob/CPSC542Test/tree/CPSC542Test/UI_TEST/ui1.PNG" alt="sort" height ="300" width="800" align="center"/>
-<img src="https://github.com/neosbob/CPSC542Test/tree/CPSC542Test/UI_TEST/ui2.PNG" alt="main" height ="300" width="800" align="center"/>
+<img src="https://github.com/neosbob/CPSC542Test/blob/CPSC542Test/UI_TEST/MainActivityTest.PNG" alt="sort" height ="300" width="800" align="center"/>
+<img src="https://github.com/neosbob/CPSC542Test/blob/CPSC542Test/UI_TEST/sortTest.PNG" alt="main" height ="300" width="800" align="center"/>
 
 ### Unit test
 
 
-<img src="https://github.com/neosbob/CPSC542Test/tree/CPSC542Test/UI_TEST/unit.PNG" alt="main" height ="300" width="800" align="center"/>
+<img src="https://github.com/neosbob/CPSC542Test/blob/CPSC542Test/UI_TEST/sort_UnitTest.PNG" alt="main" height ="300" width="800" align="center"/>
 
 ## System Features
 -  App must recognize user input either via button press or numeral.
