@@ -23,7 +23,7 @@ class MainActivityTest {
 
     @Test
     fun View_test () {
-        // this test for textview app name
+        // Test for textview app name
         onView(withId(R.id.welcome_title_text))
             .check(matches(withText("Insertion Sort App")))
         // gifview test id
@@ -34,7 +34,7 @@ class MainActivityTest {
     fun ACTIONBAR_TEST() {
         // Context of the app under test.
         onView(withId(R.id.sorting)).perform(click())
-        onView(isRoot()).perform(ViewActions.pressBack());
+        onView(isRoot()).perform(ViewActions.pressBack())
         onView(withId(R.id.aboutus)).perform(click())
         onView(withId(R.id.records)).perform(click())
     }
