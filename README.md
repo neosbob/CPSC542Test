@@ -1,6 +1,21 @@
-# Insertion Sort App
+# Insertion Sort App - CPSC 542 Test
+
+This Github repository is for developing Testing for the Insertion Sort App.
+-  Tests shall include both White Box and Black Box Testing.
+-  White Box Testing will include UI integration testing and Unit Tests.
+-  Black Box Testing will include Use Case Testing.
+
+## Test and AndroidTest package: Test results overview
+
+### UI Intergation Test
+
+<img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/ui1.PNG" alt="sort" height ="300" width="800" align="center"/>
+<img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/ui2.PNG" alt="main" height ="300" width="800" align="center"/>
+
+### Unit test
 
 
+<img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/unit.PNG" alt="main" height ="300" width="800" align="center"/>
 
 ## System Features
 -  App must recognize user input either via button press or numeral.
@@ -17,14 +32,6 @@
   6) O(N2) runtime
 
 
-## Alpha Test Demo
-<img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/alpha.gif" alt="alpha" width="250" align="center" />
-
-## Getting Started
-
-- Clone https://github.com/Dpham181/Sorting-APP-.git
-
-
 ### Prerequisites
 
  - Android Studio : https://developer.android.com/studio
@@ -34,19 +41,6 @@
 - Setting Up Emulator
 - Unzip Clone file
 - Import project then Run
-
-
-## Running the tests Located In AndroidTest package
-
-### UI Intergation Test
-
-<img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/ui1.PNG" alt="sort" height ="300" width="800" align="center"/>
-<img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/ui2.PNG" alt="main" height ="300" width="800" align="center"/>
-
-### Unit test
-
-
-<img src="https://github.com/Dpham181/Sorting-APP-/blob/master/UI_TEST/unit.PNG" alt="main" height ="300" width="800" align="center"/>
 
 
 ## Built With
@@ -71,33 +65,19 @@
 * WebView
 
 
-## Software Process:
- ### Agile
- ### Scrum
- - Pre-Game planning
- - Sprint planning
- - Sprint review
- - High level design phase
- - Daily scrum
- - Sprint
- - Common room
- ### XP
- - Daily build
- - Code review
- - Unit test
- - Continuous integration
- - Multiple iterations per sprint
- - Simplicity in code design
-
-## Authors
+## Sorting App Authors
 - **Mahyar Babaie**- _mahyarhajibabaie@csu.fullerton.edu_ -
 - **Pham,Danh** - _danhpham312@gmail.com_ - [Dpham181](https://github.com/Dpham181)
 - **Dion Pieterse**- _dionpieterse@csu.fullerton.edu_
 - **Bob Wu**-_neosbob@csu.fullerton.edu_
 - **Jonathan Poh**-_jpoh@csu.fullerton.edu_
 
+## Sorting App Test Authors
+- **Po-Hsun Wu**- _neosbob@csu.fullerton.edu_
+- **Harshitha Vedagiri** - _vedagiri_19@csu.fullerton.edu_
+- **Rashika Natharani** - _rashika.natharani@csu.fullerton.edu_
 
 
 ## Acknowledgments
 
-Instructor: Dave Garcia-Gomez [CSUF]
+Instructor: David Heckathorn [CSUF]
