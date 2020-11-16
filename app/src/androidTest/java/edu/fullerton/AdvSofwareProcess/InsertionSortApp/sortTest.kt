@@ -36,6 +36,7 @@ class sortTest {
         onView((withId(R.id.clear))).perform(click())
 
     }
+
     @Test
     fun TestInputWithSpace() {
 
@@ -52,6 +53,7 @@ class sortTest {
         onView((withId(R.id.clear))).perform(click())
 
     }
+
     @Test
     fun TestInvalidMaximumSize() {
 
@@ -76,6 +78,36 @@ class sortTest {
         onView(withId(R.id.add)).perform(click())
         onView(withId(R.id.input))
             .perform(clearText())
+        onView((withId(R.id.process))).perform(click())
+
+    }
+
+    @Test
+    fun TestInputWithNegative() {
+
+        onView(withId(R.id.input))
+            .perform(typeText("-1"))
+        Espresso.closeSoftKeyboard()
+
+        onView(withId(R.id.add)).perform(click())
+        onView(withId(R.id.input))
+            .perform(clearText())
+
+        onView((withId(R.id.process))).perform(click())
+
+    }
+
+    @Test
+    fun TestInputWithAlphabet() {
+
+        onView(withId(R.id.input))
+            .perform(typeText("a"))
+        Espresso.closeSoftKeyboard()
+
+        onView(withId(R.id.add)).perform(click())
+        onView(withId(R.id.input))
+            .perform(clearText())
+
         onView((withId(R.id.process))).perform(click())
 
     }

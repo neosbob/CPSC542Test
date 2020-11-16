@@ -34,6 +34,17 @@ public class SortTest {
     }
 
     @Test
+    public void InsertionSort_BackwardsInput() {
+        ArrayList<Integer> testArray = new ArrayList<>(Arrays.asList(5, 3, 2, 1, 0));
+
+        ArrayList<Integer> expectedResult = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 5));
+
+        ArrayList<Integer> actualResult = mockSort.InsertionSort(testArray);
+
+        assertEquals(expectedResult,actualResult);
+    }
+
+    @Test
     public void Condition_add_tooSmall() {
 
         boolean expectedResult = false;
