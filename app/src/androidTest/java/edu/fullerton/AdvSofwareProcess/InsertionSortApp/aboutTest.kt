@@ -7,7 +7,9 @@ import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.web.assertion.WebViewAssertions.webContent
 import androidx.test.espresso.web.assertion.WebViewAssertions.webMatches
+import androidx.test.espresso.web.matcher.DomMatchers.hasElementWithId
 import androidx.test.espresso.web.model.Atoms.getCurrentUrl
 import androidx.test.espresso.web.sugar.Web.onWebView
 import androidx.test.espresso.web.webdriver.DriverAtoms.findElement
@@ -17,20 +19,23 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import androidx.test.rule.ActivityTestRule
 import org.hamcrest.CoreMatchers.containsString
+import org.junit.FixMethodOrder
 import org.junit.Test
 
 import org.junit.Rule
 import org.junit.runner.RunWith
+import org.junit.runners.MethodSorters
 
 @RunWith(AndroidJUnit4::class)
 @SmallTest
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 class aboutTest {
     @get:Rule
     var activityRule: ActivityTestRule<about> = ActivityTestRule(about::class.java)
 
     @Test
-    fun _testWebViewInteraction() {
+    fun AB_testWebViewInteraction() {
         onWebView().forceJavascriptEnabled()
     }
 
@@ -46,6 +51,14 @@ class aboutTest {
     fun SCROLLVIEW_TEST() {
         // Context of the app under test.
         onView(ViewMatchers.isRoot()).perform(ViewActions.swipeUp())
+    }
+
+    @Test
+    fun UIELEMENTS_TEST() {
+        //Check UI elements for social media links are present on the page
+        onWebView().check(webContent(hasElementWithId("webDanh")))
+        onWebView().check(webContent(hasElementWithId("instagramDanh")))
+        onWebView().check(webContent(hasElementWithId("linkedinDanh")))
     }
 
     @Test
