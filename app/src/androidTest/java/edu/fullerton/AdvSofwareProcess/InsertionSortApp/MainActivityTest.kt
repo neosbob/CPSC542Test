@@ -30,6 +30,7 @@ class MainActivityTest {
         //onView(withId(R.id.gifImageView2)).check(matches(withResourceName("gifImageView2")))
 
     }
+
     @Test
     fun ACTIONBAR_TEST() {
         // Context of the app under test.
