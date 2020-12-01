@@ -23,7 +23,7 @@ public class SortTest {
     }
     
     @Test
-    public void InsertionSort_SortedResults() {
+    public void InsertionSort_PreSortedResults() {
         ArrayList<Integer> testArray = new ArrayList<>(Arrays.asList(0, 1, 3, 2, 5));
 
         ArrayList<Integer> expectedResult = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 5));
@@ -34,7 +34,7 @@ public class SortTest {
     }
 
     @Test
-    public void InsertionSort_BackwardsInput() {
+    public void InsertionSort_ReversedInput() {
         ArrayList<Integer> testArray = new ArrayList<>(Arrays.asList(5, 3, 2, 1, 0));
 
         ArrayList<Integer> expectedResult = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 5));
@@ -45,7 +45,7 @@ public class SortTest {
     }
 
     @Test
-    public void Condition_add_tooSmall() {
+    public void Condition_add_InputtooSmall() {
 
         boolean expectedResult = false;
 
@@ -55,7 +55,7 @@ public class SortTest {
     }
 
     @Test
-    public void Condition_add_tooBig() {
+    public void Condition_add_InputtooLarge() {
         boolean expectedResult = false;
 
         boolean actualResult = mockSort.Condition_add(10);
@@ -64,7 +64,7 @@ public class SortTest {
     }
 
     @Test
-    public void Condition_add_inRange() {
+    public void Condition_add_InputinRange() {
         boolean expectedResult = true;
 
         boolean actualResult = mockSort.Condition_add(4);
@@ -75,7 +75,7 @@ public class SortTest {
     }
 
     @Test
-    public void Condition_add_boundarytest_0() {
+    public void Condition_add_BoundaryTest_0() {
         boolean expectedResult = true;
 
         boolean actualResult = mockSort.Condition_add(0);
@@ -84,7 +84,7 @@ public class SortTest {
     }
 
     @Test
-    public void Condition_add_boundarytest_9() {
+    public void Condition_add_BoundaryTest_9() {
         boolean expectedResult = true;
 
         boolean actualResult = mockSort.Condition_add(9);
