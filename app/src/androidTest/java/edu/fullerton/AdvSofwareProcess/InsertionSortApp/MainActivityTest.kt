@@ -22,7 +22,7 @@ class MainActivityTest {
     var activityRule: ActivityTestRule<MainActivity> = ActivityTestRule(MainActivity::class.java)
 
     @Test
-    fun View_test () {
+    fun VIEW_TEST () {
         // Test for textview app name
         onView(withId(R.id.welcome_title_text))
             .check(matches(withText("Insertion Sort App")))

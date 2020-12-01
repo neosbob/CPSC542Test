@@ -21,7 +21,7 @@ class sortTest {
     var activityRule: ActivityTestRule<sort> = ActivityTestRule(sort::class.java)
 
     @Test
-    fun TestInputWithComma() {
+    fun Test_InputWithComma() {
 
         onView(withId(R.id.input))
             .perform(typeText("5,4,6,4,2,1"))
@@ -38,7 +38,7 @@ class sortTest {
     }
 
     @Test
-    fun TestInputWithSpace() {
+    fun Test_InputWithSpace() {
 
         onView(withId(R.id.input))
             .perform(typeText("5 8 9 3 2 4"))
@@ -55,7 +55,7 @@ class sortTest {
     }
 
     @Test
-    fun TestInvalidMaximumSize() {
+    fun Test_InvalidMaximumSize() {
 
         onView(withId(R.id.input))
             .perform(typeText("1 2 3 4 5 6 7 8 9"))
@@ -69,7 +69,7 @@ class sortTest {
     }
 
     @Test
-    fun TestInvalidInput() {
+    fun Test_InvalidInput() {
 
         onView(withId(R.id.input))
             .perform(typeText("11"))
@@ -83,7 +83,7 @@ class sortTest {
     }
 
     @Test
-    fun TestInputWithNegative() {
+    fun Test_InputWithNegative() {
 
         onView(withId(R.id.input))
             .perform(typeText("-1"))
@@ -98,7 +98,7 @@ class sortTest {
     }
 
     @Test
-    fun TestInputWithAlphabet() {
+    fun Test_InputWithAlphabet() {
 
         onView(withId(R.id.input))
             .perform(typeText("a"))
